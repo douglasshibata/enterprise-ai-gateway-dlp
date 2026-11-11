@@ -1,0 +1,10 @@
+services:
+  gateway-dlp:
+    build: .
+    container_name: enterprise-ai-gateway-dlp
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - HOST=0.0.0.0
